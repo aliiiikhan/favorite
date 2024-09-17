@@ -25,13 +25,53 @@ class Homescreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                height: 300,
-                width: 300,
-              ),
-            ],
+          Container(
+            height: 300,
+            width: 320,
+            color: Colors.green,
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 8),
+                          width: 30,
+                          height: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          margin: EdgeInsets.symmetric(horizontal: 8),
+                          color: Colors.red,
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          margin: EdgeInsets.symmetric(horizontal: 8),
+                          color: Colors.red,
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          margin: EdgeInsets.symmetric(horizontal: 8),
+                          color: Colors.red,
+                        ),
+                        Container(
+                          width: 30,
+                          height: 30,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
