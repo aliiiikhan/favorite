@@ -27,10 +27,10 @@ class Homescreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Expanded(
-                child: Containers1(),
+              Container(
+                height: 300,
+                width: 300,
               ),
-              Text('data')
             ],
           ),
         ],
