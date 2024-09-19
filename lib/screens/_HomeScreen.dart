@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/containers.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -7,73 +6,116 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
         backgroundColor: Colors.grey,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              child: Icon(Icons.arrow_back),
-            ),
-            Text('Product Details'),
-            CircleAvatar(
-              child: Icon(Icons.favorite_border),
+            Text('WhatsApp'),
+            Row(
+              children: [
+                CircleAvatar(child: Icon(Icons.camera_alt)),
+                SizedBox(
+                  width: 10,
+                ),
+                CircleAvatar(
+                  child: Icon(Icons.menu),
+                ),
+              ],
             ),
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 300,
-            width: 320,
-            color: Colors.green,
-            child: Stack(
+      body: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Search',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Positioned(
-                  bottom: 20,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 8),
-                          width: 30,
-                          height: 30,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 30,
-                          height: 30,
-                          margin: EdgeInsets.symmetric(horizontal: 8),
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 30,
-                          height: 30,
-                          margin: EdgeInsets.symmetric(horizontal: 8),
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 30,
-                          height: 30,
-                          margin: EdgeInsets.symmetric(horizontal: 8),
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 30,
-                          height: 30,
-                          color: Colors.red,
-                        ),
-                      ],
+                Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'All',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
                     ),
                   ),
-                )
+                  height: 30,
+                  width: 80,
+                ),
+                Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Unread',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                  height: 30,
+                  width: 80,
+                ),
+                Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Favorite',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                  height: 30,
+                  width: 80,
+                ),
+                Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Archive',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                  height: 30,
+                  width: 80,
+                ),
               ],
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Icon(Icons.archive),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Archived',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              children: [],
+            ),
+          ],
+        ),
       ),
     );
   }
