@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/chatRow.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -15,7 +16,9 @@ class Homescreen extends StatelessWidget {
             Text('WhatsApp'),
             Row(
               children: [
-                CircleAvatar(child: Icon(Icons.camera_alt)),
+                CircleAvatar(
+                  child: Icon(Icons.camera_alt),
+                ),
                 SizedBox(
                   width: 10,
                 ),
@@ -41,78 +44,39 @@ class Homescreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 4,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'All',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                    ),
-                  ),
-                  height: 30,
-                  width: 80,
-                ),
-                Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Unread',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                    ),
-                  ),
-                  height: 30,
-                  width: 80,
-                ),
-                Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Favorite',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                    ),
-                  ),
-                  height: 30,
-                  width: 80,
-                ),
-                Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Archive',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                    ),
-                  ),
-                  height: 30,
-                  width: 80,
-                ),
-              ],
+            Chatrow(),
+            SizedBox(
+              height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(Icons.archive),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'Archived',
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
-                ],
-              ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
             ),
-            Row(
-              children: [],
+            Chatrow(),
+            SizedBox(
+              height: 5,
+            ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
+            ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
+            ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
+            ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
+            ),
+            Chatrow(),
+            SizedBox(
+              height: 5,
             ),
           ],
         ),
