@@ -1,85 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/chatRow.dart';
 
 class Homescreen extends StatelessWidget {
-  const Homescreen({super.key});
+  Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('WhatsApp'),
-            Row(
+        backgroundColor: Colors.red,
+        title: Text(
+          'Peria',
+        ),
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 6,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: TextField(
+              decoration: InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: const BorderRadius.all(Radius.circular(35.0)),
+                  )),
+            ),
+          ),
+          SizedBox(
+            height: 7,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 19),
+            child: Row(
               children: [
-                CircleAvatar(
-                  child: Icon(Icons.camera_alt),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                CircleAvatar(
-                  child: Icon(Icons.menu),
+                ClipOval(
+                  child: Image.asset(
+                    'assets/images/a.jpeg',
+                    fit: BoxFit.cover,
+                    width: 60,
+                    height: 60,
+                  ),
                 ),
               ],
             ),
-          ],
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'Search',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 4,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-            Chatrow(),
-            SizedBox(
-              height: 5,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
